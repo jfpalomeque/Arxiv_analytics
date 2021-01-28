@@ -3,7 +3,7 @@ import pandas as pd
 import nltk
 from nltk.corpus import stopwords
 import streamlit as st
-from collections2 import Counter
+from collections import Counter
 import matplotlib.pyplot as plt
 import altair as alt
 
