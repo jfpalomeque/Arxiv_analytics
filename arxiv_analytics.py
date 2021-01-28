@@ -113,7 +113,7 @@ dfperc["2021"] = dfperc["2021"].map(lambda x: x if not isinstance(x, list) else 
 dfperc = dfperc.set_index("key_word")
 
 
-st.title("Keyword in Arxiv titlkes")
+st.title("Keyword in Arxiv titles")
 st.write("This small scripts download 10000 paper titles from the categorie Applied Statistics of the preprint repository Arxiv, in order to analyze the percentage of key_words that appear in the titles year by year.")
 st.write(dfperc)
 st.line_chart(dfperc)
