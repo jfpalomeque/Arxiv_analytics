@@ -8,7 +8,9 @@ import matplotlib.pyplot as plt
 import altair as alt
 
 stopwords = ["i", "me", "my", "myself", "we", "our", "ours", "ourselves", "you", "your", "yours", "yourself", "yourselves", "he", "him", "his", "himself", "she", "her", "hers", "herself", "it", "its", "itself", "they", "them", "their", "theirs", "themselves", "what", "which", "who", "whom", "this", "that", "these", "those", "am", "is", "are", "was", "were", "be", "been", "being", "have", "has", "had", "having", "do", "does", "did", "doing", "a", "an", "the", "and", "but", "if", "or", "because", "as", "until", "while", "of", "at", "by", "for", "with", "about", "against", "between", "into", "through", "during", "before", "after", "above", "below", "to", "from", "up", "down", "in", "out", "on", "off", "over", "under", "again", "further", "then", "once", "here", "there", "when", "where", "why", "how", "all", "any", "both", "each", "few", "more", "most", "other", "some", "such", "no", "nor", "not", "only", "own", "same", "so", "than", "too", "very", "s", "t", "can", "will", "just", "don", "should", "now"]
-
+st.title("Keyword in Arxiv titles")
+st.write("This small scripts download 10000 paper titles from the categorie Applied Statistics of the preprint repository Arxiv, in order to analyze the percentage of key_words that appear in the titles year by year.")
+st.write("The downloading of the information can take several minutes!")
 
 
 
@@ -113,8 +115,6 @@ dfperc["2021"] = dfperc["2021"].map(lambda x: x if not isinstance(x, list) else 
 dfperc = dfperc.set_index("key_word")
 
 
-st.title("Keyword in Arxiv titles")
-st.write("This small scripts download 10000 paper titles from the categorie Applied Statistics of the preprint repository Arxiv, in order to analyze the percentage of key_words that appear in the titles year by year.")
 st.write(dfperc)
 st.line_chart(dfperc)
 
